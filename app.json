@@ -1,0 +1,65 @@
+{
+  "name": "CoastGuard AI",
+  "version": "1.0.0",
+  "description": "AI-Powered Coastal Disaster Intelligence Platform — Hackathon Demonstration Prototype",
+  "tagline": "Predict. Alert. Evacuate. Respond. Recover.",
+  "type": "frontend-prototype",
+  "mode": "demo",
+  "technology": {
+    "frontend": ["HTML5", "CSS3", "Vanilla JavaScript", "SVG"],
+    "backend": "none",
+    "database": "none",
+    "apis": "none",
+    "frameworks": "none",
+    "build_tools": "none"
+  },
+  "pages": [
+    { "file": "index.html",           "title": "Home — CoastGuard AI",           "description": "Landing page with hero section, Gujarat coastal profile, AI agents overview and solution flow" },
+    { "file": "command-center.html",  "title": "Command Center",                  "description": "Real-time dashboard with cyclone tracker, live simulation, charts, and alert center" },
+    { "file": "ai-agents.html",       "title": "AI Agents Dashboard",             "description": "5 specialized AI agent cards with interactive demo analysis modal" },
+    { "file": "risk-map.html",        "title": "Gujarat Coastal Risk Map",        "description": "Custom SVG map of 12 Gujarat coastal districts with risk filters and detail panel" },
+    { "file": "emergency.html",       "title": "Emergency Preparedness Hub",      "description": "Cyclone checklists, evacuation planner, vessel tracking, resource management, damage assessment" }
+  ],
+  "ai_agents": [
+    { "id": "cyclone",    "name": "Cyclone Intelligence Agent",   "number": "01" },
+    { "id": "fishermen",  "name": "Fishermen Safety Agent",       "number": "02" },
+    { "id": "evacuation", "name": "Evacuation Planner Agent",     "number": "03" },
+    { "id": "relief",     "name": "Relief Coordinator Agent",     "number": "04" },
+    { "id": "damage",     "name": "Damage Assessment Agent",      "number": "05" }
+  ],
+  "coverage": {
+    "region": "Gujarat, India",
+    "coastlineKm": 1600,
+    "coastalDistricts": [
+      "Kutch", "Devbhumi Dwarka", "Jamnagar", "Porbandar", "Junagadh",
+      "Gir Somnath", "Amreli", "Bhavnagar", "Bharuch", "Surat", "Navsari", "Valsad"
+    ],
+    "populationCovered": "50M+",
+    "threatSource": "Arabian Sea cyclones"
+  },
+  "features": [
+    "Cyclone risk tracking with animated radar visualization",
+    "Live simulation with auto-updating wind/risk metrics",
+    "5 AI agent demo analysis modals with terminal animation",
+    "Custom SVG Gujarat coastline map with 12 districts",
+    "District-level risk filtering (ALL/LOW/MEDIUM/HIGH/CRITICAL)",
+    "Interactive district detail panel with risk metrics",
+    "Alert center with dynamic alert generation",
+    "SVG/JS charts: risk trend, district risk, alert activity, resources",
+    "Interactive cyclone preparedness checklist (Before/During/After)",
+    "Evacuation planner with shelter recommendations",
+    "Fishermen vessel tracking with clickable vessel cards",
+    "Relief resource optimizer with progress bars",
+    "AI damage assessment with image upload preview",
+    "Responsive mobile navigation with hamburger menu",
+    "No-build, open-in-browser design"
+  ],
+  "disclaimer": "CoastGuard AI is a frontend demonstration prototype for hackathon/educational purposes only. All data, alerts, risk scores, AI analyses, vessel positions, cyclone information, and statistics are entirely simulated and fictional. This is NOT real-time emergency information. In actual emergencies, follow official government advisories from IMD, NDMA, and NDRF.",
+  "author": "CoastGuard AI Team",
+  "year": 2026,
+  "license": "Demo Prototype — Not for Production Use",
+  "contact": {
+    "type": "hackathon-demo",
+    "note": "Created as a hackathon demonstration prototype"
+  }
+}

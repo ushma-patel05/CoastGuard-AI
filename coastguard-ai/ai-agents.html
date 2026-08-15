@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>AI Agents — CoastGuard AI</title>
+<link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <span class="nav-logo-title">⚓ CoastGuard AI</span>
+        <span class="nav-logo-sub">Coastal Disaster Intelligence</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="command-center.html">Command Center</a></li>
+        <li><a href="ai-agents.html" class="active">AI Agents</a></li>
+        <li><a href="risk-map.html">Risk Map</a></li>
+        <li><a href="emergency.html">Emergency</a></li>
+      </ul>
+      <div class="nav-right">
+        <span class="demo-badge">DEMO MODE</span>
+        <button class="nav-hamburger" id="hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <nav class="nav-mobile" id="mobileNav">
+      <a href="index.html">Home</a>
+      <a href="command-center.html">Command Center</a>
+      <a href="ai-agents.html">AI Agents</a>
+      <a href="risk-map.html">Risk Map</a>
+      <a href="emergency.html">Emergency</a>
+    </nav>
+  </div>
+</nav>
+
+<!-- PAGE HEADER -->
+<div class="page-header">
+  <div class="container">
+    <div class="page-header-badge"><span class="demo-badge">● DEMO MODE — SIMULATED DATA</span></div>
+    <h1 style="margin-top:0.5rem"><span class="text-gradient">AI Agent</span> Dashboard</h1>
+    <p style="max-width:580px;margin-top:0.5rem">
+      5 specialized AI agents working in coordination — each responsible for a critical phase of
+      coastal disaster intelligence. Click <strong>Run Demo Analysis</strong> on any agent to simulate
+      an AI-powered assessment.
+    </p>
+  </div>
+</div>
+
+<!-- AGENT OVERVIEW STATS -->
+<section class="section-sm">
+  <div class="container">
+    <div class="grid-5" style="gap:1rem;margin-bottom:2rem">
+      <div class="card" style="padding:1rem;text-align:center">
+        <div style="font-size:1.8rem;font-weight:800;color:var(--cyan)">5</div>
+        <div style="font-size:0.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.06em">Active Agents</div>
+      </div>
+      <div class="card" style="padding:1rem;text-align:center">
+        <div style="font-size:1.8rem;font-weight:800;color:var(--safe)">92%</div>
+        <div style="font-size:0.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.06em">Avg Confidence</div>
+      </div>
+      <div class="card" style="padding:1rem;text-align:center">
+        <div style="font-size:1.8rem;font-weight:800;color:var(--high)">HIGH</div>
+        <div style="font-size:0.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.06em">Threat Level</div>
+      </div>
+      <div class="card" style="padding:1rem;text-align:center">
+        <div style="font-size:1.8rem;font-weight:800;color:var(--warn)">12</div>
+        <div style="font-size:0.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.06em">Districts</div>
+      </div>
+      <div class="card" style="padding:1rem;text-align:center">
+        <div style="font-size:1.8rem;font-weight:800;color:var(--electric)">DEMO</div>
+        <div style="font-size:0.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.06em">Mode</div>
+      </div>
+    </div>
+
+    <!-- Architecture diagram -->
+    <div class="card card-pad" style="margin-bottom:2rem">
+      <div class="section-label" style="margin-bottom:0.5rem">Agentic Architecture</div>
+      <h4 style="margin-bottom:1rem">How the Agents Work Together</h4>
+      <div style="display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:1rem">
+        <div style="background:rgba(6,182,212,0.1);border:1px solid rgba(6,182,212,0.3);border-radius:8px;padding:0.6rem 1.2rem;font-size:0.82rem;font-weight:600;color:var(--cyan)">📡 Data Layer</div>
+        <div style="color:var(--muted)">→</div>
+        <div style="background:rgba(139,92,246,0.1);border:1px solid rgba(139,92,246,0.3);border-radius:8px;padding:0.6rem 1.2rem;font-size:0.82rem;font-weight:600;color:#c4b5fd">🧠 Orchestrator</div>
+        <div style="color:var(--muted)">→</div>
+        <div style="background:rgba(30,64,175,0.1);border:1px solid rgba(30,64,175,0.3);border-radius:8px;padding:0.6rem 1.2rem;font-size:0.82rem;font-weight:600;color:#93c5fd">5 Agents</div>
+        <div style="color:var(--muted)">→</div>
+        <div style="background:rgba(245,158,11,0.1);border:1px solid rgba(245,158,11,0.3);border-radius:8px;padding:0.6rem 1.2rem;font-size:0.82rem;font-weight:600;color:var(--warn)">🚨 Actions</div>
+        <div style="color:var(--muted)">→</div>
+        <div style="background:rgba(34,197,94,0.1);border:1px solid rgba(34,197,94,0.3);border-radius:8px;padding:0.6rem 1.2rem;font-size:0.82rem;font-weight:600;color:var(--safe)">✅ Response</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AGENT CARDS — rendered by JS -->
+<section class="section-sm" style="padding-top:0">
+  <div class="container">
+    <div style="margin-bottom:1rem">
+      <div class="section-label">Specialized Agents</div>
+      <h2>All 5 AI Agents</h2>
+    </div>
+    <div class="grid-auto" id="agentCardsContainer"></div>
+    <div style="margin-top:1.5rem;font-size:0.78rem;color:var(--muted);text-align:center;padding:1rem;background:rgba(245,158,11,0.06);border:1px solid rgba(245,158,11,0.15);border-radius:8px">
+      ⚠ All analyses are simulated demos. No real AI model or API is used. Results are based on pre-defined mock data.
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo-title">⚓ CoastGuard AI</div>
+        <div class="footer-desc">AI-inspired coastal disaster intelligence for safer communities.</div>
+      </div>
+      <div>
+        <div class="footer-heading">Navigation</div>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="command-center.html">Command Center</a></li>
+          <li><a href="ai-agents.html">AI Agents</a></li>
+          <li><a href="risk-map.html">Risk Map</a></li>
+          <li><a href="emergency.html">Emergency</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-heading">Agents</div>
+        <ul class="footer-links">
+          <li><a href="#">Cyclone Intelligence</a></li>
+          <li><a href="#">Fishermen Safety</a></li>
+          <li><a href="#">Evacuation Planner</a></li>
+          <li><a href="#">Relief Coordinator</a></li>
+          <li><a href="#">Damage Assessment</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-disclaimer">⚠ CoastGuard AI is a frontend demonstration prototype. All AI analyses are simulated and not real.</div>
+      <div class="footer-copy">© 2026 CoastGuard AI — Hackathon Demonstration Prototype</div>
+    </div>
+  </div>
+</footer>
+
+<!-- AI Agent Modal -->
+<div class="modal-overlay" id="agentModal">
+  <div class="modal">
+    <div class="modal-header">
+      <div>
+        <div class="modal-title" id="modalTitle">AI Agent Analysis</div>
+        <div style="font-size:0.75rem;color:var(--muted);margin-top:2px">SIMULATED DEMO — NOT REAL AI</div>
+      </div>
+      <button class="modal-close" aria-label="Close">×</button>
+    </div>
+    <div class="modal-body">
+      <div class="terminal" id="terminalOutput"></div>
+      <div class="terminal-result hidden" id="terminalResult"></div>
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-outline modal-close">Close</button>
+    </div>
+  </div>
+</div>
+
+<script src="js/mock-data.js"></script>
+<script src="js/agents.js"></script>
+</body>
+</html>

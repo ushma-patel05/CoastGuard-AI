@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>CoastGuard AI — Coastal Disaster Intelligence</title>
+<meta name="description" content="AI-Powered Coastal Disaster Intelligence — Cyclone tracking, fishermen safety, evacuation planning and relief coordination for Gujarat's coastline."/>
+<link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+
+<!-- ═══════════════════ NAVBAR ═══════════════════ -->
+<nav class="navbar">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <span class="nav-logo-title">⚓ CoastGuard AI</span>
+        <span class="nav-logo-sub">Coastal Disaster Intelligence</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="command-center.html">Command Center</a></li>
+        <li><a href="ai-agents.html">AI Agents</a></li>
+        <li><a href="risk-map.html">Risk Map</a></li>
+        <li><a href="emergency.html">Emergency</a></li>
+      </ul>
+      <div class="nav-right">
+        <span class="demo-badge">DEMO MODE</span>
+        <a href="command-center.html" class="btn btn-primary btn-sm">Launch Center →</a>
+        <button class="nav-hamburger" id="hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <nav class="nav-mobile" id="mobileNav">
+      <a href="index.html">Home</a>
+      <a href="command-center.html">Command Center</a>
+      <a href="ai-agents.html">AI Agents</a>
+      <a href="risk-map.html">Risk Map</a>
+      <a href="emergency.html">Emergency</a>
+    </nav>
+  </div>
+</nav>
+
+<!-- ═══════════════════ HERO ═══════════════════ -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-inner">
+      <!-- Left content -->
+      <div>
+        <div class="hero-tag">🌊 AI-Powered Coastal Intelligence</div>
+        <h1 class="hero-title">
+          AI-Powered<br/>
+          <span class="text-gradient">Coastal Disaster</span><br/>
+          Intelligence
+        </h1>
+        <p class="hero-desc">
+          An Agentic AI-inspired coastal disaster intelligence platform designed to demonstrate
+          hyperlocal cyclone risk tracking, fishermen safety, evacuation planning, relief
+          coordination, and post-disaster damage assessment for Gujarat's coastline.
+        </p>
+        <div class="hero-demo-note">
+          ⚠ DEMO MODE • ALL DATA IS SIMULATED • NOT REAL-TIME EMERGENCY INFORMATION
+        </div>
+        <div class="hero-buttons mt-3">
+          <a href="command-center.html" class="btn btn-primary">🖥 Launch Command Center →</a>
+          <a href="ai-agents.html"      class="btn btn-outline">🤖 Explore AI Agents</a>
+          <a href="risk-map.html"       class="btn btn-outline">🗺 View Risk Map</a>
+          <a href="emergency.html"      class="btn btn-outline">🚨 Emergency Guide</a>
+        </div>
+      </div>
+
+      <!-- Right — Radar Visual -->
+      <div class="hero-visual">
+        <div class="radar-wrap">
+          <svg class="radar-svg" viewBox="0 0 420 420" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <radialGradient id="radarGlow" cx="50%" cy="50%">
+                <stop offset="0%"   stop-color="#06b6d4" stop-opacity="0.15"/>
+                <stop offset="100%" stop-color="#06b6d4" stop-opacity="0"/>
+              </radialGradient>
+              <linearGradient id="sweepGrad" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0%"   stop-color="#06b6d4" stop-opacity="0.7"/>
+                <stop offset="100%" stop-color="#06b6d4" stop-opacity="0"/>
+              </linearGradient>
+            </defs>
+            <!-- BG glow -->
+            <circle cx="210" cy="210" r="200" fill="url(#radarGlow)"/>
+            <!-- Rings -->
+            <circle cx="210" cy="210" r="190" class="radar-ring"/>
+            <circle cx="210" cy="210" r="145" class="radar-ring"/>
+            <circle cx="210" cy="210" r="95"  class="radar-ring"/>
+            <circle cx="210" cy="210" r="45"  class="radar-ring"/>
+            <!-- Crosshairs -->
+            <line x1="210" y1="20" x2="210" y2="400" stroke="rgba(6,182,212,0.1)" stroke-width="1"/>
+            <line x1="20"  y1="210" x2="400" y2="210" stroke="rgba(6,182,212,0.1)" stroke-width="1"/>
+            <line x1="75"  y1="75"  x2="345" y2="345" stroke="rgba(6,182,212,0.06)" stroke-width="1"/>
+            <line x1="345" y1="75"  x2="75"  y2="345" stroke="rgba(6,182,212,0.06)" stroke-width="1"/>
+            <!-- Sweep -->
+            <g class="radar-sweep">
+              <path d="M210,210 L210,20 A190,190 0 0,1 370,210 Z" fill="url(#sweepGrad)" opacity="0.35"/>
+            </g>
+            <!-- Risk zones -->
+            <circle cx="210" cy="210" r="95" fill="rgba(239,68,68,0.06)" stroke="rgba(239,68,68,0.15)" stroke-width="1" stroke-dasharray="5,3"/>
+            <!-- Cyclone -->
+            <g class="cyclone-icon">
+              <text x="175" y="155" font-size="52" text-anchor="middle">🌀</text>
+            </g>
+            <!-- Blips -->
+            <circle class="radar-blip" cx="280" cy="155" r="5" fill="#ef4444"/>
+            <circle class="radar-blip" cx="148" cy="270" r="4" fill="#f59e0b" style="animation-delay:0.5s"/>
+            <circle class="radar-blip" cx="310" cy="250" r="3" fill="#22c55e" style="animation-delay:1s"/>
+            <circle class="radar-blip" cx="160" cy="160" r="3" fill="#22c55e" style="animation-delay:1.5s"/>
+            <!-- Center -->
+            <circle class="radar-center-glow" cx="210" cy="210" r="8" fill="#06b6d4" opacity="0.8"/>
+            <!-- Labels -->
+            <text x="210" y="38"  text-anchor="middle" font-family="system-ui" font-size="10" fill="rgba(6,182,212,0.6)">N</text>
+            <text x="395" y="215" text-anchor="middle" font-family="system-ui" font-size="10" fill="rgba(6,182,212,0.6)">E</text>
+            <text x="210" y="408" text-anchor="middle" font-family="system-ui" font-size="10" fill="rgba(6,182,212,0.6)">S</text>
+            <text x="18"  y="215" text-anchor="middle" font-family="system-ui" font-size="10" fill="rgba(6,182,212,0.6)">W</text>
+          </svg>
+          <!-- Floating data cards -->
+          <div class="hero-data-cards">
+            <div class="hdc top-right">
+              <div class="hdc-label">Cyclone Status</div>
+              <div class="hdc-value" style="color:#ef4444">HIGH RISK</div>
+            </div>
+            <div class="hdc mid-right">
+              <div class="hdc-label">Wind</div>
+              <div class="hdc-value">118 km/h</div>
+            </div>
+            <div class="hdc bot-left">
+              <div class="hdc-label">Landfall</div>
+              <div class="hdc-value" style="color:#f59e0b">72%</div>
+            </div>
+            <div class="hdc top-left">
+              <div class="hdc-label">Districts</div>
+              <div class="hdc-value">07 At Risk</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ COASTAL PROFILE STATS ═══════════════════ -->
+<section class="section" style="padding-top:2rem">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-label">Gujarat Coastal Risk Profile</div>
+      <h2>Gujarat Coastal Risk Profile</h2>
+      <p style="max-width:600px;margin:0.75rem auto 0">Gujarat's extensive coastline faces severe cyclone threats from the Arabian Sea, requiring advanced disaster intelligence and rapid response.</p>
+      <div class="section-divider"></div>
+    </div>
+    <div class="grid-4">
+      <div class="card stat-card">
+        <div class="stat-number text-gradient"><span data-count="1600" data-suffix="+">0</span></div>
+        <div class="stat-label">KM Coastline</div>
+      </div>
+      <div class="card stat-card">
+        <div class="stat-number text-gradient"><span data-count="12">0</span></div>
+        <div class="stat-label">Coastal Districts</div>
+      </div>
+      <div class="card stat-card">
+        <div class="stat-number text-gradient"><span data-count="50" data-suffix="M+">0</span></div>
+        <div class="stat-label">Population at Risk</div>
+      </div>
+      <div class="card stat-card">
+        <div class="stat-number text-gradient"><span data-count="5">0</span></div>
+        <div class="stat-label">AI Agents</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ THE CHALLENGE ═══════════════════ -->
+<section class="section">
+  <div class="container">
+    <div class="grid-2" style="align-items:start;gap:3rem">
+      <div>
+        <div class="section-label">The Problem</div>
+        <h2 style="margin-bottom:1rem">The Challenge</h2>
+        <p style="margin-bottom:1rem">
+          Gujarat's 1,600+ km coastline is one of India's most cyclone-prone regions. The Arabian
+          Sea generates powerful cyclones that strike with little warning, threatening millions of
+          coastal residents, thousands of fishermen at sea, and critical infrastructure.
+        </p>
+        <p style="margin-bottom:1rem">
+          Traditional disaster response systems struggle with data fragmentation, slow communication
+          chains, and lack of hyperlocal risk intelligence — costing precious hours when every minute
+          matters.
+        </p>
+        <p>
+          CoastGuard AI demonstrates how an Agentic AI architecture could transform coastal disaster
+          preparedness through coordinated, intelligent, real-time decision support.
+        </p>
+      </div>
+      <div>
+        <div class="section-label" style="margin-bottom:1rem">Key Challenges</div>
+        <div class="grid-2">
+          <div class="card card-pad" style="padding:1.1rem">
+            <div style="font-size:1.5rem;margin-bottom:0.5rem">⏱</div>
+            <h4>Delayed Warnings</h4>
+            <p style="font-size:0.82rem;margin-top:4px">Critical hours lost between cyclone detection and ground-level alerts.</p>
+          </div>
+          <div class="card card-pad" style="padding:1.1rem">
+            <div style="font-size:1.5rem;margin-bottom:0.5rem">📍</div>
+            <h4>Hyperlocal Gaps</h4>
+            <p style="font-size:0.82rem;margin-top:4px">District-level warnings miss village-level and coastal micro-risks.</p>
+          </div>
+          <div class="card card-pad" style="padding:1.1rem">
+            <div style="font-size:1.5rem;margin-bottom:0.5rem">🚢</div>
+            <h4>Fishermen at Sea</h4>
+            <p style="font-size:0.82rem;margin-top:4px">Thousands of fishing vessels tracked individually during emergencies.</p>
+          </div>
+          <div class="card card-pad" style="padding:1.1rem">
+            <div style="font-size:1.5rem;margin-bottom:0.5rem">🏃</div>
+            <h4>Evacuation Chaos</h4>
+            <p style="font-size:0.82rem;margin-top:4px">Uncoordinated evacuation leads to traffic bottlenecks and delays.</p>
+          </div>
+          <div class="card card-pad" style="padding:1.1rem">
+            <div style="font-size:1.5rem;margin-bottom:0.5rem">📦</div>
+            <h4>Resource Gaps</h4>
+            <p style="font-size:0.82rem;margin-top:4px">Food, medical, and rescue resources often mismatched to needs.</p>
+          </div>
+          <div class="card card-pad" style="padding:1.1rem">
+            <div style="font-size:1.5rem;margin-bottom:0.5rem">📊</div>
+            <h4>Damage Delays</h4>
+            <p style="font-size:0.82rem;margin-top:4px">Post-disaster assessment delays slow recovery and aid allocation.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ THE SOLUTION ═══════════════════ -->
+<section class="section" style="background:rgba(255,255,255,0.015)">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-label">The Solution</div>
+      <h2>One Intelligence Layer.<br/>Complete Disaster Response.</h2>
+      <p style="max-width:560px;margin:0.75rem auto 0">CoastGuard AI connects every stage of the disaster cycle through a unified agentic intelligence layer.</p>
+      <div class="section-divider"></div>
+    </div>
+    <div style="display:flex;justify-content:center">
+      <div class="flow-list">
+        <div class="flow-step">
+          <div class="flow-node" style="background:rgba(6,182,212,0.15);border-color:rgba(6,182,212,0.4)">📡 Data Ingestion</div>
+          <div class="flow-arrow"></div>
+        </div>
+        <div class="flow-step">
+          <div class="flow-node">🧠 AI Analysis</div>
+          <div class="flow-arrow"></div>
+        </div>
+        <div class="flow-step">
+          <div class="flow-node">⚡ Risk Assessment</div>
+          <div class="flow-arrow"></div>
+        </div>
+        <div class="flow-step">
+          <div class="flow-node" style="background:rgba(239,68,68,0.12);border-color:rgba(239,68,68,0.3);color:#fca5a5">🚨 Alert Generation</div>
+          <div class="flow-arrow"></div>
+        </div>
+        <div class="flow-step">
+          <div class="flow-node" style="background:rgba(245,158,11,0.1);border-color:rgba(245,158,11,0.3);color:#fbbf24">🏃 Evacuation Planning</div>
+          <div class="flow-arrow"></div>
+        </div>
+        <div class="flow-step">
+          <div class="flow-node" style="background:rgba(139,92,246,0.1);border-color:rgba(139,92,246,0.3);color:#c4b5fd">🏥 Relief Response</div>
+          <div class="flow-arrow"></div>
+        </div>
+        <div class="flow-step">
+          <div class="flow-node" style="background:rgba(34,197,94,0.1);border-color:rgba(34,197,94,0.3);color:#86efac">🏗 Recovery</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ AI AGENTS ═══════════════════ -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-label">Agentic AI Architecture</div>
+      <h2>5 Specialized AI Agents</h2>
+      <p style="max-width:560px;margin:0.75rem auto 0">Each agent operates as a specialized intelligence module. Click <strong>Run Demo Analysis</strong> to simulate an AI-powered assessment.</p>
+      <div class="section-divider"></div>
+    </div>
+    <div class="grid-auto">
+      <!-- Agent 01 -->
+      <div class="card agent-card">
+        <div class="agent-number">01</div>
+        <div style="font-size:2rem;margin-bottom:0.5rem">🌀</div>
+        <div class="agent-name">Cyclone Intelligence</div>
+        <div class="agent-desc">Tracks wind speed, direction, intensity, landfall probability and multi-district risk in real time.</div>
+        <div class="agent-metrics">
+          <span class="agent-metric">Wind Speed</span>
+          <span class="agent-metric">Pressure</span>
+          <span class="agent-metric">Direction</span>
+          <span class="agent-metric">Landfall %</span>
+        </div>
+        <button class="btn btn-primary btn-full" data-agent="cyclone">▶ Run Demo Analysis</button>
+      </div>
+      <!-- Agent 02 -->
+      <div class="card agent-card">
+        <div class="agent-number">02</div>
+        <div style="font-size:2rem;margin-bottom:0.5rem">⚓</div>
+        <div class="agent-name">Fishermen Safety</div>
+        <div class="agent-desc">Monitors vessel locations, danger zones, crew safety and generates vessel-specific recall alerts.</div>
+        <div class="agent-metrics">
+          <span class="agent-metric">Vessels</span>
+          <span class="agent-metric">Danger Zone</span>
+          <span class="agent-metric">At Risk</span>
+          <span class="agent-metric">Alerts</span>
+        </div>
+        <button class="btn btn-primary btn-full" data-agent="fishermen">▶ Run Demo Analysis</button>
+      </div>
+      <!-- Agent 03 -->
+      <div class="card agent-card">
+        <div class="agent-number">03</div>
+        <div style="font-size:2rem;margin-bottom:0.5rem">🗺️</div>
+        <div class="agent-name">Evacuation Planner</div>
+        <div class="agent-desc">Analyzes population, shelter capacity, routes, traffic and generates phased evacuation plans.</div>
+        <div class="agent-metrics">
+          <span class="agent-metric">Population</span>
+          <span class="agent-metric">Shelters</span>
+          <span class="agent-metric">Routes</span>
+          <span class="agent-metric">Priority</span>
+        </div>
+        <button class="btn btn-primary btn-full" data-agent="evacuation">▶ Run Demo Analysis</button>
+      </div>
+      <!-- Agent 04 -->
+      <div class="card agent-card">
+        <div class="agent-number">04</div>
+        <div style="font-size:2rem;margin-bottom:0.5rem">🏥</div>
+        <div class="agent-name">Relief Coordinator</div>
+        <div class="agent-desc">Optimizes food, medical kits, rescue boats, shelter and water resource distribution across districts.</div>
+        <div class="agent-metrics">
+          <span class="agent-metric">Food</span>
+          <span class="agent-metric">Medical</span>
+          <span class="agent-metric">Boats</span>
+          <span class="agent-metric">Shelters</span>
+        </div>
+        <button class="btn btn-primary btn-full" data-agent="relief">▶ Run Demo Analysis</button>
+      </div>
+      <!-- Agent 05 -->
+      <div class="card agent-card">
+        <div class="agent-number">05</div>
+        <div style="font-size:2rem;margin-bottom:0.5rem">📊</div>
+        <div class="agent-name">Damage Assessment</div>
+        <div class="agent-desc">Analyzes buildings, roads, agriculture and infrastructure to generate post-cyclone damage reports.</div>
+        <div class="agent-metrics">
+          <span class="agent-metric">Buildings</span>
+          <span class="agent-metric">Roads</span>
+          <span class="agent-metric">Agriculture</span>
+          <span class="agent-metric">Severity</span>
+        </div>
+        <button class="btn btn-primary btn-full" data-agent="damage">▶ Run Demo Analysis</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ CTA BANNER ═══════════════════ -->
+<section class="section" style="padding:3rem 0">
+  <div class="container">
+    <div class="card card-pad-lg" style="text-align:center;background:linear-gradient(135deg,rgba(30,64,175,0.3),rgba(6,182,212,0.15))">
+      <div class="section-label">Interactive Demo</div>
+      <h2 style="margin-bottom:0.75rem">Ready to explore?</h2>
+      <p style="max-width:500px;margin:0 auto 1.5rem">Launch the live command center to see cyclone tracking, active alerts, live simulations and resource dashboards.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:0.75rem;justify-content:center">
+        <a href="command-center.html" class="btn btn-primary">🖥 Command Center</a>
+        <a href="ai-agents.html"      class="btn btn-outline">🤖 AI Agents</a>
+        <a href="risk-map.html"       class="btn btn-outline">🗺 Risk Map</a>
+        <a href="emergency.html"      class="btn btn-outline">🚨 Emergency</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ FOOTER ═══════════════════ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo-title">⚓ CoastGuard AI</div>
+        <div class="footer-desc">AI-inspired coastal disaster intelligence for safer communities. A hackathon demonstration prototype.</div>
+      </div>
+      <div>
+        <div class="footer-heading">Navigation</div>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="command-center.html">Command Center</a></li>
+          <li><a href="ai-agents.html">AI Agents</a></li>
+          <li><a href="risk-map.html">Risk Map</a></li>
+          <li><a href="emergency.html">Emergency</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-heading">Technology</div>
+        <ul class="footer-links">
+          <li><a href="#">Cyclone Intelligence</a></li>
+          <li><a href="#">Fishermen Safety</a></li>
+          <li><a href="#">Evacuation Planning</a></li>
+          <li><a href="#">Relief Coordination</a></li>
+          <li><a href="#">Damage Assessment</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-disclaimer">
+        ⚠ <strong>DISCLAIMER:</strong> CoastGuard AI is a frontend demonstration prototype for hackathon purposes only. All alerts, risk scores, maps, AI analyses, vessel positions, cyclone information, and statistics shown are entirely simulated and fictional. This is NOT real-time emergency information. In an actual emergency, follow official government advisories from IMD, NDMA, and NDRF.
+      </div>
+      <div class="footer-copy">© 2026 CoastGuard AI — Hackathon Demonstration Prototype • Built with HTML5, CSS3 & Vanilla JavaScript</div>
+    </div>
+  </div>
+</footer>
+
+<!-- ═══════════════════ AI AGENT MODAL ═══════════════════ -->
+<div class="modal-overlay" id="agentModal">
+  <div class="modal">
+    <div class="modal-header">
+      <div>
+        <div class="modal-title" id="modalTitle">AI Agent Analysis</div>
+        <div style="font-size:0.75rem;color:var(--muted);margin-top:2px">SIMULATED DEMO — NOT REAL AI</div>
+      </div>
+      <button class="modal-close" aria-label="Close">×</button>
+    </div>
+    <div class="modal-body">
+      <div class="terminal" id="terminalOutput"></div>
+      <div class="terminal-result hidden" id="terminalResult"></div>
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-outline modal-close">Close</button>
+    </div>
+  </div>
+</div>
+
+<script src="js/mock-data.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

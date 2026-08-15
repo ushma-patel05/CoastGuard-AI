@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Emergency Preparedness — CoastGuard AI</title>
+<link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <span class="nav-logo-title">⚓ CoastGuard AI</span>
+        <span class="nav-logo-sub">Coastal Disaster Intelligence</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="command-center.html">Command Center</a></li>
+        <li><a href="ai-agents.html">AI Agents</a></li>
+        <li><a href="risk-map.html">Risk Map</a></li>
+        <li><a href="emergency.html" class="active">Emergency</a></li>
+      </ul>
+      <div class="nav-right">
+        <span class="demo-badge">DEMO MODE</span>
+        <button class="nav-hamburger" id="hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <nav class="nav-mobile" id="mobileNav">
+      <a href="index.html">Home</a>
+      <a href="command-center.html">Command Center</a>
+      <a href="ai-agents.html">AI Agents</a>
+      <a href="risk-map.html">Risk Map</a>
+      <a href="emergency.html">Emergency</a>
+    </nav>
+  </div>
+</nav>
+
+<!-- PAGE HEADER -->
+<div class="page-header">
+  <div class="container">
+    <div class="page-header-badge"><span class="demo-badge">● DEMO MODE — SIMULATED DATA</span></div>
+    <h1 style="margin-top:0.5rem">Emergency<br/><span class="text-gradient">Preparedness Hub</span></h1>
+    <p style="max-width:580px;margin-top:0.5rem">Complete cyclone preparedness guide with interactive checklists, evacuation planning, vessel tracking, resource management, and damage assessment tools.</p>
+  </div>
+</div>
+
+<!-- PREPAREDNESS GUIDE -->
+<section class="section-sm">
+  <div class="container">
+    <div class="section-label" style="margin-bottom:0.5rem">Cyclone Preparedness</div>
+    <h2 style="margin-bottom:2rem">What To Do — Before, During & After</h2>
+    <div class="grid-3">
+
+      <!-- Before -->
+      <div class="card card-pad" style="border-top:3px solid var(--warn)">
+        <div style="font-size:1.5rem;margin-bottom:0.75rem">⚡</div>
+        <h3 style="margin-bottom:1rem;color:var(--warn)">Before Cyclone</h3>
+        <div id="beforeList">
+          <div class="checklist-item"><div class="checklist-cb"></div><div class="checklist-text">Secure all important documents in waterproof container</div></div>
+          <div class="checklist-item"><div class="checklist-cb"></div><div class="checklist-text">Charge all mobile devices and power banks</div></div>
+          <div class="checklist-item"><div class="checklist-cb"></div><div class="checklist-text">Store 3+ days of drinking water and food</div></div>
+          <div class="checklist-item"><div class="checklist-cb"></div><div class="checklist-text">Follow official weather warnings from IMD</div></div>
+          <div class="checklist-item"><div class="checklist-cb"></div><div class="checklist-text">Prepare a family emergency kit (medicines, torch)</div></div>
+          <div class="checklist-item"><div class="checklist-cb"></div><div class="checklist-text">Know your nearest evacuation shelter location</div></div>
+          <div class="checklist-item"><div class="checklist-cb"></div><div class="checklist-text">Secure loose objects around your home</div></div>
+          <div class="checklist-item"><div class="checklist-cb"></div><div class="checklist-text">Share your plan with family members</div></div>
+        </div>
+      </div>
+
+      <!-- During -->
+      <div class="card card-pad" style="border-top:3px solid var(--high)">
+        <div style="font-size:1.5rem;margin-bottom:0.75rem">🌀</div>
+        <h3 style="margin-bottom:1rem;color:var(--high)">During Cyclone</h3>
+        <div id="duringList">
+          <div class="checklist-item"><div class="checklist-cb"></div><div class="checklist-text">Stay indoors away from windows and doors</div></div>
+          <div class="checklist-item"><div class="checklist-cb"></div><div class="checklist-text">Avoid all coastal, river, and low-lying areas</div></div>
+          <div class="checklist-item"><div class="checklist-cb"></div><div class="checklist-text">Follow official evacuation orders immediately</div></div>
+          <div class="checklist-item"><div class="checklist-cb"></div><div class="checklist-text">Do not travel unnecessarily on roads</div></div>
+          <div class="checklist-item"><div class="checklist-cb"></div><div class="checklist-text">Listen to NDMA / State DMA radio broadcasts</div></div>
+          <div class="checklist-item"><div class="checklist-cb"></div><div class="checklist-text">Do not use electrical equipment during storm</div></div>
+          <div class="checklist-item"><div class="checklist-cb"></div><div class="checklist-text">Keep emergency contacts readily available</div></div>
+          <div class="checklist-item"><div class="checklist-cb"></div><div class="checklist-text">If evacuating, follow designated routes only</div></div>
+        </div>
+      </div>
+
+      <!-- After -->
+      <div class="card card-pad" style="border-top:3px solid var(--safe)">
+        <div style="font-size:1.5rem;margin-bottom:0.75rem">🏗</div>
+        <h3 style="margin-bottom:1rem;color:var(--safe)">After Cyclone</h3>
+        <div id="afterList">
+          <div class="checklist-item"><div class="checklist-cb"></div><div class="checklist-text">Avoid entering damaged buildings or structures</div></div>
+          <div class="checklist-item"><div class="checklist-cb"></div><div class="checklist-text">Report all emergencies to official helplines</div></div>
+          <div class="checklist-item"><div class="checklist-cb"></div><div class="checklist-text">Follow official instructions before returning home</div></div>
+          <div class="checklist-item"><div class="checklist-cb"></div><div class="checklist-text">Assist elderly, disabled and vulnerable persons</div></div>
+          <div class="checklist-item"><div class="checklist-cb"></div><div class="checklist-text">Do not touch downed power lines or cables</div></div>
+          <div class="checklist-item"><div class="checklist-cb"></div><div class="checklist-text">Boil water before consumption until cleared</div></div>
+          <div class="checklist-item"><div class="checklist-cb"></div><div class="checklist-text">Document property damage for insurance claims</div></div>
+          <div class="checklist-item"><div class="checklist-cb"></div><div class="checklist-text">Register at relief camps if home is uninhabitable</div></div>
+        </div>
+      </div>
+    </div>
+    <div style="margin-top:1rem;font-size:0.78rem;color:var(--muted);text-align:center;padding:0.75rem;background:rgba(245,158,11,0.06);border:1px solid rgba(245,158,11,0.15);border-radius:8px">
+      ⚠ DEMO CHECKLIST — In a real emergency always follow official government advisories from IMD, NDMA, and your State DMA.
+    </div>
+  </div>
+</section>
+
+<!-- EVACUATION PLANNER -->
+<section class="section-sm" style="background:rgba(255,255,255,0.015);padding:2rem 0">
+  <div class="container">
+    <div class="grid-2" style="gap:2rem;align-items:start">
+      <div>
+        <div class="section-label">AI-Powered Tool</div>
+        <h2 style="margin-bottom:0.75rem">Evacuation Planner</h2>
+        <p style="margin-bottom:1.5rem">Enter your district and population details to generate a simulated evacuation recommendation.</p>
+        <div class="card card-pad">
+          <div class="form-group">
+            <label class="form-label">District</label>
+            <select class="form-select" id="evacDistrict">
+              <option value="Kutch">Kutch</option>
+              <option value="Devbhumi Dwarka">Devbhumi Dwarka</option>
+              <option value="Jamnagar">Jamnagar</option>
+              <option value="Porbandar">Porbandar</option>
+              <option value="Junagadh">Junagadh</option>
+              <option value="Gir Somnath">Gir Somnath</option>
+              <option value="Amreli">Amreli</option>
+              <option value="Bhavnagar">Bhavnagar</option>
+              <option value="Bharuch">Bharuch</option>
+              <option value="Surat">Surat</option>
+              <option value="Navsari">Navsari</option>
+              <option value="Valsad">Valsad</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Estimated Population to Evacuate</label>
+            <input type="number" class="form-input" id="evacPopulation" placeholder="e.g. 50000" value="50000"/>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Current Risk Level</label>
+            <select class="form-select" id="evacRisk">
+              <option value="LOW">LOW</option>
+              <option value="MEDIUM">MEDIUM</option>
+              <option value="HIGH" selected>HIGH</option>
+              <option value="CRITICAL">CRITICAL</option>
+            </select>
+          </div>
+          <button class="btn btn-primary btn-full" id="calcEvacBtn">▶ Calculate Evacuation Plan</button>
+          <div id="evacResult" class="evac-result"></div>
+        </div>
+      </div>
+      <div>
+        <div class="section-label" style="margin-bottom:0.5rem">Available Shelters</div>
+        <h3 style="margin-bottom:1rem">Designated Shelters</h3>
+        <div id="shelterList">
+          <!-- rendered dynamically -->
+        </div>
+        <script>
+          document.addEventListener('DOMContentLoaded', () => {
+            const container = document.getElementById('shelterList');
+            if (!container || !window.MOCK_DATA) return;
+            container.innerHTML = window.MOCK_DATA.shelters.map(s => {
+              const pct = Math.round((s.occupied / s.capacity) * 100);
+              const cls = pct > 75 ? 'progress-high' : pct > 40 ? 'progress-warn' : 'progress-blue';
+              return `
+              <div class="card" style="padding:1rem;margin-bottom:0.75rem">
+                <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:0.5rem">
+                  <div>
+                    <div style="font-weight:700;font-size:0.9rem">${s.name}</div>
+                    <div style="font-size:0.75rem;color:var(--muted)">${s.district} · ${s.distance} km · ${s.travelTime} min</div>
+                  </div>
+                  <span class="badge badge-${s.route==='SAFE'?'safe':'warn'}">${s.route}</span>
+                </div>
+                <div style="display:flex;justify-content:space-between;margin-bottom:4px">
+                  <span style="font-size:0.75rem;color:var(--muted)">Occupancy</span>
+                  <span style="font-size:0.75rem;font-weight:600">${s.occupied.toLocaleString()} / ${s.capacity.toLocaleString()}</span>
+                </div>
+                <div class="progress-wrap"><div class="progress-bar ${cls}" style="width:${pct}%"></div></div>
+              </div>`;
+            }).join('');
+          });
+        </script>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FISHERMEN SAFETY -->
+<section class="section-sm" style="padding:2rem 0">
+  <div class="container">
+    <div class="section-label">Vessel Tracking</div>
+    <h2 style="margin-bottom:0.5rem">Fishermen Safety Monitor</h2>
+    <p style="margin-bottom:0.5rem">Demo vessel tracking. Click any vessel for details.</p>
+    <div style="font-size:0.78rem;color:var(--warn);font-weight:600;margin-bottom:1.5rem">⚠ FICTIONAL DEMO VESSEL DATA — NOT REAL</div>
+    <div class="grid-2" style="gap:1rem" id="vesselContainer"></div>
+  </div>
+</section>
+
+<!-- RESOURCES -->
+<section class="section-sm" style="background:rgba(255,255,255,0.015);padding:2rem 0">
+  <div class="container">
+    <div class="grid-2" style="gap:2rem;align-items:start">
+      <div>
+        <div class="section-label">Resource Management</div>
+        <h2 style="margin-bottom:0.75rem">Relief Resources</h2>
+        <p style="margin-bottom:1.5rem">Current availability vs. estimated requirements. Click Optimize to simulate resource reallocation.</p>
+        <div class="card card-pad" id="resourceDisplay"></div>
+        <button class="btn btn-primary mt-2" id="optimizeBtn" style="width:100%">▶ Optimize Resources</button>
+        <div id="optimizeNote" style="display:none;margin-top:0.75rem;font-size:0.82rem;color:var(--safe);padding:0.75rem;background:rgba(34,197,94,0.06);border:1px solid rgba(34,197,94,0.2);border-radius:8px"></div>
+        <div style="margin-top:0.75rem;font-size:0.72rem;color:var(--muted)">⚠ SIMULATED RESOURCE DATA</div>
+      </div>
+      <div>
+        <div class="section-label" style="margin-bottom:0.5rem">Resource Summary</div>
+        <h3 style="margin-bottom:1rem">Required vs. Available</h3>
+        <div class="grid-2">
+          <div class="card" style="padding:1rem;text-align:center;border-top:3px solid var(--high)">
+            <div style="font-size:1.6rem;font-weight:800;color:var(--high)">12,500</div>
+            <div style="font-size:0.72rem;color:var(--muted);text-transform:uppercase">Food Packets</div>
+            <div style="font-size:0.75rem;color:var(--warn);margin-top:2px">Need: 15,000</div>
+          </div>
+          <div class="card" style="padding:1rem;text-align:center;border-top:3px solid var(--safe)">
+            <div style="font-size:1.6rem;font-weight:800;color:var(--safe)">2,800</div>
+            <div style="font-size:0.72rem;color:var(--muted);text-transform:uppercase">Medical Kits</div>
+            <div style="font-size:0.75rem;color:var(--safe);margin-top:2px">Adequate</div>
+          </div>
+          <div class="card" style="padding:1rem;text-align:center;border-top:3px solid var(--warn)">
+            <div style="font-size:1.6rem;font-weight:800;color:var(--warn)">28</div>
+            <div style="font-size:0.72rem;color:var(--muted);text-transform:uppercase">Rescue Boats</div>
+            <div style="font-size:0.75rem;color:var(--warn);margin-top:2px">Need: 35</div>
+          </div>
+          <div class="card" style="padding:1rem;text-align:center;border-top:3px solid var(--safe)">
+            <div style="font-size:1.6rem;font-weight:800;color:var(--safe)">42</div>
+            <div style="font-size:0.72rem;color:var(--muted);text-transform:uppercase">Shelters</div>
+            <div style="font-size:0.75rem;color:var(--safe);margin-top:2px">Sufficient</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DAMAGE ASSESSMENT -->
+<section class="section-sm" style="padding:2rem 0">
+  <div class="container">
+    <div class="section-label">Post-Disaster Tool</div>
+    <h2 style="margin-bottom:0.5rem">AI Damage Assessment</h2>
+    <p style="margin-bottom:0.5rem">Upload any image to simulate an AI-powered damage assessment. No real AI model is used.</p>
+    <div style="font-size:0.78rem;color:var(--warn);font-weight:600;margin-bottom:1.5rem">⚠ DEMO SIMULATION — ALL RESULTS ARE SIMULATED — NO REAL AI MODEL</div>
+    <div class="grid-2" style="gap:2rem;align-items:start">
+      <div>
+        <div class="card card-pad">
+          <div class="upload-area" id="dropZone">
+            <div class="upload-icon">🛰️</div>
+            <div class="upload-text">
+              <strong>Click to upload or drag & drop</strong><br/>
+              <span style="font-size:0.82rem">Any image (JPG, PNG, WEBP)</span>
+            </div>
+          </div>
+          <input type="file" id="damageImageInput" accept="image/*" style="display:none"/>
+          <div id="imagePreview"></div>
+          <button class="btn btn-danger btn-full mt-2" id="runDamageBtn" disabled>▶ Run Demo Assessment</button>
+          <div style="margin-top:0.5rem;font-size:0.72rem;color:var(--muted);text-align:center">SIMULATED RESULT — NOT REAL AI MODEL</div>
+        </div>
+      </div>
+      <div>
+        <div id="damageResult"></div>
+        <div class="card card-pad" style="margin-top:1rem">
+          <div style="font-size:0.75rem;font-weight:700;color:var(--cyan);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.75rem">Sample Assessment Metrics</div>
+          <div style="font-size:0.82rem;color:var(--muted);line-height:2">
+            <div>🏠 Buildings Damaged: <strong style="color:var(--white)">128</strong></div>
+            <div>🛣 Road Damage: <strong style="color:var(--white)">34%</strong></div>
+            <div>🌾 Agriculture Damage: <strong style="color:var(--white)">21%</strong></div>
+            <div>⚡ Infrastructure Damage: <strong style="color:var(--white)">18%</strong></div>
+            <div>📊 Overall Severity: <strong style="color:var(--high)">HIGH</strong></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EMERGENCY CONTACTS (SIMULATED) -->
+<section class="section-sm" style="background:rgba(255,255,255,0.015);padding:2rem 0">
+  <div class="container">
+    <div class="section-label">Emergency Information</div>
+    <h2 style="margin-bottom:1.5rem">Official Contacts <span style="font-size:0.75rem;color:var(--warn);font-weight:600">(DEMO DISPLAY)</span></h2>
+    <div class="grid-4" style="gap:1rem">
+      <div class="card" style="padding:1.25rem;text-align:center">
+        <div style="font-size:2rem;margin-bottom:0.5rem">🚑</div>
+        <div style="font-weight:700;font-size:1rem;color:var(--white)">NDMA Helpline</div>
+        <div style="font-size:1.2rem;font-weight:800;color:var(--cyan);margin-top:4px">1078</div>
+        <div style="font-size:0.72rem;color:var(--muted)">National Disaster</div>
+      </div>
+      <div class="card" style="padding:1.25rem;text-align:center">
+        <div style="font-size:2rem;margin-bottom:0.5rem">🌧</div>
+        <div style="font-weight:700;font-size:1rem;color:var(--white)">IMD Cyclone</div>
+        <div style="font-size:1.2rem;font-weight:800;color:var(--cyan);margin-top:4px">1905</div>
+        <div style="font-size:0.72rem;color:var(--muted)">Weather Service</div>
+      </div>
+      <div class="card" style="padding:1.25rem;text-align:center">
+        <div style="font-size:2rem;margin-bottom:0.5rem">⚓</div>
+        <div style="font-weight:700;font-size:1rem;color:var(--white)">Coast Guard</div>
+        <div style="font-size:1.2rem;font-weight:800;color:var(--cyan);margin-top:4px">1554</div>
+        <div style="font-size:0.72rem;color:var(--muted)">Maritime Rescue</div>
+      </div>
+      <div class="card" style="padding:1.25rem;text-align:center">
+        <div style="font-size:2rem;margin-bottom:0.5rem">🚒</div>
+        <div style="font-weight:700;font-size:1rem;color:var(--white)">Gujarat SDMA</div>
+        <div style="font-size:1.2rem;font-weight:800;color:var(--cyan);margin-top:4px">0-1070</div>
+        <div style="font-size:0.72rem;color:var(--muted)">State Disaster Mgmt</div>
+      </div>
+    </div>
+    <div style="margin-top:1rem;font-size:0.78rem;color:var(--muted);text-align:center">⚠ Always verify contact numbers with official government sources in a real emergency.</div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo-title">⚓ CoastGuard AI</div>
+        <div class="footer-desc">AI-inspired coastal disaster intelligence for safer communities.</div>
+      </div>
+      <div>
+        <div class="footer-heading">Navigation</div>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="command-center.html">Command Center</a></li>
+          <li><a href="ai-agents.html">AI Agents</a></li>
+          <li><a href="risk-map.html">Risk Map</a></li>
+          <li><a href="emergency.html">Emergency</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-heading">Emergency</div>
+        <ul class="footer-links">
+          <li><a href="#">Before Cyclone</a></li>
+          <li><a href="#">During Cyclone</a></li>
+          <li><a href="#">After Cyclone</a></li>
+          <li><a href="#">Evacuation Plan</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-disclaimer">⚠ CoastGuard AI is a frontend demonstration prototype. All alerts, risk scores, vessel data, analyses, and contact information shown are for demonstration only and must NOT be used in actual emergencies. Follow official government guidance.</div>
+      <div class="footer-copy">© 2026 CoastGuard AI — Hackathon Demonstration Prototype</div>
+    </div>
+  </div>
+</footer>
+
+<!-- Vessel Modal -->
+<div class="modal-overlay" id="vesselModal">
+  <div class="modal">
+    <div class="modal-header">
+      <div class="modal-title" id="vesselModalTitle">Vessel Details</div>
+      <button class="modal-close" aria-label="Close">×</button>
+    </div>
+    <div class="modal-body" id="vesselModalBody"></div>
+    <div class="modal-footer">
+      <button class="btn btn-outline modal-close">Close</button>
+    </div>
+  </div>
+</div>
+
+<script src="js/mock-data.js"></script>
+<script src="js/emergency.js"></script>
+</body>
+</html>
